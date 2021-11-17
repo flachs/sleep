@@ -354,7 +354,7 @@ public class ScriptInstance implements Serializable, Runnable
        if (statistics == null) 
        {
           statistics = new HashMap();
-          total      = new Long(0L);
+          total = Long.valueOf(0L);
 
           getMetadata().put("%statistics%", statistics);
           getMetadata().put("%total%", total);
@@ -375,7 +375,7 @@ public class ScriptInstance implements Serializable, Runnable
        stats.calls ++;
 
        /** update global statistic */
-       getMetadata().put("%total%", new Long(total.longValue() + ticks));
+       getMetadata().put("%total%", Long.valueOf(total.longValue() + ticks));
     }
 
     /** a quick way to check if we are profiling and not tracing the script steps */

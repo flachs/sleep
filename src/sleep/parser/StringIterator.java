@@ -144,8 +144,8 @@ public class StringIterator
 
    public void mark()
    {
-      mark1.add(0, new Integer(position));
-      mark2.add(0, new Integer(lineNo));
+      mark1.add(0, Integer.valueOf(position));
+      mark2.add(0, Integer.valueOf(lineNo));
    }
 
    public String reset()

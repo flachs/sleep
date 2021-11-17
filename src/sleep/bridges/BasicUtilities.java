@@ -334,7 +334,7 @@ public class BasicUtilities implements Function, Loadable, Predicate
                 {
                    if (parent != null)
                    {
-                      URLClassLoader loader = new URLClassLoader(new URL[] { parent.toURL() });
+                   URLClassLoader loader = new URLClassLoader(new URL[] { parent.toURI().toURL() });
                       bridge = Class.forName(className, true, loader);
                    }
                    else
@@ -347,7 +347,7 @@ public class BasicUtilities implements Function, Loadable, Predicate
 
                 if (bridges.get(bridge) == null)
                 {
-                   temp = (Loadable)bridge.newInstance();
+                   temp = (Loadable)bridge.getDeclaredConstructor().newInstance();
                    bridges.put(bridge, temp);
                 }
                 else
@@ -374,7 +374,7 @@ public class BasicUtilities implements Function, Loadable, Predicate
                 {
                    File theFile = parent.isDirectory() ? new File(parent, className) : parent;
 
-                   URLClassLoader loader = new URLClassLoader(new URL[] { parent.toURL() });
+                   URLClassLoader loader = new URLClassLoader(new URL[] { parent.toURI().toURL() });
                    sloader.touch(className, theFile.lastModified());
                    si.associateFile(theFile); /* associate this included script with the current script instance */
 

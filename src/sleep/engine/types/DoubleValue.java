@@ -65,7 +65,7 @@ public class DoubleValue implements ScalarType
 
    public Object objectValue()
    {
-      return new Double(value);
+      return Double.valueOf(value);
    }
 
    public Class getType() { return this.getClass(); }

@@ -314,7 +314,7 @@ public class Block implements Serializable
               if (environment.isCallCC())
               {
                  environment.getCurrentFrame().push(source);
-                 environment.getCurrentFrame().push(new Integer(temp.getLineNumber()));
+                 environment.getCurrentFrame().push(Integer.valueOf(temp.getLineNumber()));
               }
 
               if (environment.isThrownValue())

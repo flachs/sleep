@@ -65,7 +65,7 @@ public class IntValue implements ScalarType
 
    public Object objectValue()
    {
-      return new Integer(value);
+      return Integer.valueOf(value);
    }
 
    public Class getType()

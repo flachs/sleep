@@ -424,31 +424,31 @@ public class ObjectUtilities
          }
          else if (type == Byte.TYPE)
          {
-            return new Byte((byte)value.intValue());
+            return Byte.valueOf((byte)value.intValue());
          }
          else if (type == Character.TYPE)
          {
-            return new Character(value.toString().charAt(0));
+            return Character.valueOf(value.toString().charAt(0));
          }
          else if (type == Double.TYPE)
          {
-            return new Double(value.doubleValue());
+            return Double.valueOf(value.doubleValue());
          }
          else if (type == Float.TYPE)
          {
-            return new Float((float)value.doubleValue());
+            return Float.valueOf((float)value.doubleValue());
          }
          else if (type == Integer.TYPE)
          {
-            return new Integer(value.intValue());
+            return Integer.valueOf(value.intValue());
          }
          else if (type == Short.TYPE)
          {
-            return new Short((short)value.intValue());
+            return Short.valueOf((short)value.intValue());
          }
          else if (type == Long.TYPE)
          {
-            return new Long(value.longValue());
+            return Long.valueOf(value.longValue());
          }
       }
       else if (SleepUtils.isEmptyScalar(value))

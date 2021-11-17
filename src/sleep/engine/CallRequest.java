@@ -201,7 +201,7 @@ public abstract class CallRequest
          Scalar callme = temp;
 
          e.pushSource(((SleepClosure)callme.objectValue()).getAndRemoveMetadata("sourceFile", "<unknown>") + "");
-         int lno = ( (Integer)(  ((SleepClosure)callme.objectValue()).getAndRemoveMetadata("sourceLine", new Integer(-1))  ) ).intValue();
+         int lno = ( (Integer)(  ((SleepClosure)callme.objectValue()).getAndRemoveMetadata("sourceLine", Integer.valueOf(-1))  ) ).intValue();
 
          if (e.markFrame() >= 0)
          {
