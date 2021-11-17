@@ -444,7 +444,7 @@ public class ScriptLoader
 
             if (BLOCK_CACHE != null)
             {
-                BLOCK_CACHE.put(name, new Object[] { temp.getRunnableBlock(), new Long(System.currentTimeMillis()) });
+                BLOCK_CACHE.put(name, new Object[] { temp.getRunnableBlock(), Long.valueOf(System.currentTimeMillis()) });
             }
 
             return temp.getRunnableBlock();

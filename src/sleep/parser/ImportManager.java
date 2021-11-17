@@ -117,7 +117,7 @@ public class ImportManager
    {
         try
         {
-            URL url = f.toURL();
+            URL url = f.toURI().toURL();
 
             URLClassLoader sysloader = (URLClassLoader) ClassLoader.getSystemClassLoader();
             Class sysclass = java.net.URLClassLoader.class;

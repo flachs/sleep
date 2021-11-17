@@ -65,7 +65,7 @@ public class LongValue implements ScalarType
 
    public Object objectValue()
    {
-      return new Long(value);
+      return Long.valueOf(value);
    }
 
    public Class getType() { return this.getClass(); }
